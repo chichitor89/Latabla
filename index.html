@@ -129,6 +129,7 @@
     <tr><td>Pipa</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
     <tr><td>Luquitas</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td></tr>
   </table>
+  <h1>Caja= 60.000 gs</h1>
 
   <h1>Historial de Partidos 📅</h1>
   <div id="historial">
@@ -204,34 +205,8 @@
         </div>
       </div>
     </div>
-<div>
-    <h1>Caja Total = 60.000 gs</h1>
-</div>
-<div>
 
-    <h3>Tabla de Goleadores</h3>
-    <table id="goleadores">
-      <tr>
-        <th>#</th><th>Jugador</th><th>Goles</th>
-      </tr>
-      <tr><td></td><td>Marce S</td><td>5</td></tr>
-      <tr><td></td><td>Choco</td><td>5</td></tr>
-      <tr><td></td><td>Cucho</td><td>2</td></tr>
-      <tr><td></td><td>Sapo</td><td>2</td></tr>
-      <tr><td></td><td>Fabi</td><td>2</td></tr>
-      <tr><td></td><td>Chicho</td><td>1</td></tr>
-      <tr><td></td><td>Seba</td><td>1</td></tr>
-      <tr><td></td><td>Masita</td><td>0</td></tr>
-      <tr><td></td><td>Terzo</td><td>0</td></tr>
-      <tr><td></td><td>Agus D</td><td>0</td></tr>
-      <tr><td></td><td>Pape</td><td>-8</td></tr>
-      <tr><td></td><td>Vargas</td><td>0</td></tr>
-      <tr><td></td><td>Joaco</td><td>0</td></tr>
-      <tr><td></td><td>Ricky</td><td>0</td></tr>
-      <tr><td></td><td>Javi</td><td>0</td></tr>
-      <tr><td></td><td>Benja</td><td>-10</td></tr>
-    </table>
-</div>
+
 
 
     
@@ -241,26 +216,7 @@
   </div>
   <script>
 
-    function ordenarGoleadores() {
-    const tabla = document.getElementById("goleadores");
-    const filas = Array.from(tabla.rows).slice(1); // excluye encabezado
-
-    // Ordenar por goles (descendente)
-    filas.sort((a, b) => {
-      const golesA = parseInt(a.cells[2].innerText);
-      const golesB = parseInt(b.cells[2].innerText);
-      return golesB - golesA;
-    });
-
-    // Reinsertar filas ordenadas y enumerar
-    filas.forEach((fila, index) => {
-      fila.cells[0].innerText = index + 1; // primera celda = número
-      tabla.appendChild(fila);
-    });
-  }
-
-  ordenarGoleadores();
-
+    
     
   // Selección de filas en la tabla
   const filas = document.querySelectorAll("#tabla tr");
@@ -298,6 +254,7 @@
 
   // Ejecutar al cargar
   ordenarTabla();
+  
 
 
   
